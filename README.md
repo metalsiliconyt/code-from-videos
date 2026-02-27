@@ -8,7 +8,7 @@ Welcome to the official code repository for the **MetalSilicon** YouTube channel
 ---
 
 ## Toolchain & Environment
-* **IDE** - VsCode with the PlatformIO extension for embedded programming
+* **IDE** - VsCode with the Draw.io & PlatformIO extensions
 * **Compiler** - GCC
 * **Build System** - CMAKE
   
