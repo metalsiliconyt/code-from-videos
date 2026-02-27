@@ -1,0 +1,16 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="Ib93pvuVqGUG_4wOBexb">
+    <mxGraphModel dx="1013" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZWaPN5JO9KFxKxG6zMQQ-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Roboto Mono&quot; style=&quot;font-size: 72px;&quot;&gt;&lt;b&gt;Clean your ugly code&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="480" x="170" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWaPN5JO9KFxKxG6zMQQ-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Roboto Mono&quot; style=&quot;font-size: 48px;&quot;&gt;Punning?&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="580" y="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
