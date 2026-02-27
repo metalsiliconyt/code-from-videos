@@ -1,0 +1,129 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="08FX0HfmdZF08mzeo1Sc">
+    <mxGraphModel dx="1229" dy="2008" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-6" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-7" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="HighSchool" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-19" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-26" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-27" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="280" />
+              <mxPoint x="400" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-32" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.337;entryDx=0;entryDy=0;entryPerimeter=0;" target="kwXUYzLzcwylGr_W2_U7-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="280" />
+              <mxPoint x="400" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Computer Science" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-22" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-23" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-24" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-31" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.682;entryDx=0;entryDy=0;entryPerimeter=0;" target="kwXUYzLzcwylGr_W2_U7-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="490" />
+              <mxPoint x="400" y="390" />
+              <mxPoint x="430" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Electrical/Computer Engineering" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-48" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="FPGA/RTL Chip Design Research" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-52" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Computer Science Minor" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-51" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Embedded System Projects (Solve real problems with hardware)" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-47" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Computer Engineering/Embedded SWE Minor" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-50" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Machine Learning/Compiler Research" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-46" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Embedded System Projects (Solve real problems with hardware)" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-49" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Embedded Internships" vertex="1">
+          <mxGeometry height="60" width="140" x="430" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-56" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Portfolio + Resume" vertex="1">
+          <mxGeometry height="60" width="140" x="660" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-63" edge="1" parent="1" source="kwXUYzLzcwylGr_W2_U7-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="kwXUYzLzcwylGr_W2_U7-64">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1060" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Interviewing" vertex="1">
+          <mxGeometry height="60" width="140" x="850" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-64" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" value="Job!" vertex="1">
+          <mxGeometry height="80" width="120" x="1050" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="kwXUYzLzcwylGr_W2_U7-85" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: rgb(255, 255, 255); font-size: 124px;&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;&quot;&gt;What You Need&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="930" x="130" y="-60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

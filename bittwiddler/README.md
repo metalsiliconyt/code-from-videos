@@ -1,0 +1,1 @@
+gcc circular_buffer.c -o out && ./out

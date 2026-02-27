@@ -1,0 +1,109 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="0G6u_RzkAPKZ6UI5mfe4">
+    <mxGraphModel dx="1106" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;0 1 0 1 0 1 0 0&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="475" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Bit representation&lt;br&gt;(Whats actually in memory)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="115" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;&lt;font style=&quot;color: rgb(0, 255, 0);&quot;&gt;1&lt;/font&gt; &lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;0&lt;/font&gt; &lt;font style=&quot;color: rgb(0, 255, 0);&quot;&gt;1&lt;/font&gt; &lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;0&lt;/font&gt; &lt;font style=&quot;color: rgb(0, 255, 0);&quot;&gt;1&lt;/font&gt; &lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;0&lt;/font&gt; 0 0&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="480" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;168&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="480" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;unsigned char x = 84;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="10" width="410" x="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-12" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="120" as="sourcePoint" />
+            <mxPoint x="400" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;&lt;b&gt;// Shift all x bits left 1 position&lt;br&gt;&lt;/b&gt;&lt;b&gt;x = x &amp;lt;&amp;lt; 1;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="10" width="570" x="140" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Bit representation&lt;br&gt;(Whats actually in memory)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="130" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;x base 10 number (x * 2)&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="140" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;1 &lt;font style=&quot;color: rgb(0, 255, 0);&quot;&gt;1&lt;/font&gt; 1 0 1 0 0 0&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="480" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;232&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="480" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;// Set the sixth bit in x to 1&lt;br&gt;x |= (1 &amp;lt;&amp;lt; 6);&lt;/font&gt;" vertex="1">
+          <mxGeometry height="10" width="450" x="190" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Bit representation&lt;br&gt;(Whats actually in memory)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="130" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;x base 10 number (x + 64)&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="140" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-21" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="404.5" y="540" as="sourcePoint" />
+            <mxPoint x="404.5" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;1 &lt;font color=&quot;#ff0000&quot;&gt;0&lt;/font&gt;&amp;nbsp;1 0 1 0 0 0&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="480" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;168&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="480" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;// Clear the sixth bit in x to 0&lt;br&gt;x &amp;amp;= ~(1 &amp;lt;&amp;lt; 6);&lt;/font&gt;" vertex="1">
+          <mxGeometry height="10" width="450" x="190" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Bit representation&lt;br&gt;(Whats actually in memory)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="130" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;x base 10 number (x - 64)&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="140" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-27" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="404.5" y="870" as="sourcePoint" />
+            <mxPoint x="404.5" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;1 &lt;font color=&quot;#00ff00&quot;&gt;1&lt;/font&gt;&amp;nbsp;1 0 1 0 0 0&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="475" y="1460" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;232&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="475" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;// Invert the value of the sixth bit&amp;nbsp;&lt;br&gt;x ^= (1 &amp;lt;&amp;lt; 6);&lt;/font&gt;" vertex="1">
+          <mxGeometry height="10" width="545" x="140" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Bit representation&lt;br&gt;(Whats actually in memory)&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="125" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;x base 10 number (x + 64)&lt;/b&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="220" x="135" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-35" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="399.5" y="1200" as="sourcePoint" />
+            <mxPoint x="399.5" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 48px; color: rgb(255, 255, 255);&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;&quot;&gt;How to use the most important operators in C&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="705" x="62.5" y="1760" as="geometry" />
+        </mxCell>
+        <mxCell id="3uQ0Na-nU_ITPi6K9P23-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 48px; color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;| &amp;amp; &amp;lt;&amp;lt; &amp;gt;&amp;gt; ~ ^&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="460" x="195" y="1860" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

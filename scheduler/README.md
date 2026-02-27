@@ -1,0 +1,1 @@
+gcc scheduler.c -o out && ./out

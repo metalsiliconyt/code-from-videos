@@ -1,0 +1,28 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram name="Page-1" id="4Epg9Ujouq5r_oqqTwie">
+    <mxGraphModel dx="1106" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iwQYENXiIkMzMcVrLuBS-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 48px; color: rgb(255, 255, 255);&quot; face=&quot;Roboto Mono&quot;&gt;&lt;b style=&quot;&quot;&gt;How to actually allocate memory in C/C++&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="530" x="20" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="iwQYENXiIkMzMcVrLuBS-18" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="280" width="310" x="110" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="iwQYENXiIkMzMcVrLuBS-3" parent="iwQYENXiIkMzMcVrLuBS-18" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Stack&lt;/font&gt;" vertex="1">
+          <mxGeometry height="77.104" width="281.1627906976744" x="28.83720930232558" as="geometry" />
+        </mxCell>
+        <mxCell id="iwQYENXiIkMzMcVrLuBS-4" parent="iwQYENXiIkMzMcVrLuBS-18" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Heap&lt;/font&gt;" vertex="1">
+          <mxGeometry height="77.104" width="281.1627906976744" x="28.83720930232558" y="77.104" as="geometry" />
+        </mxCell>
+        <mxCell id="iwQYENXiIkMzMcVrLuBS-7" parent="iwQYENXiIkMzMcVrLuBS-18" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Static Memory&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot;&gt;(.bss, .data, .rodata)&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="77.104" width="281.1627906976744" x="28.83720930232558" y="154.20000000000002" as="geometry" />
+        </mxCell>
+        <mxCell id="iwQYENXiIkMzMcVrLuBS-8" parent="iwQYENXiIkMzMcVrLuBS-18" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;.text&lt;/font&gt;" vertex="1">
+          <mxGeometry height="48.696" width="281.1627906976744" x="28.83720930232558" y="231.304" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
