@@ -16,7 +16,7 @@ Welcome to the official code repository for the **MetalSilicon** YouTube channel
 
 ## Community & Career Growth
 If you are an engineer looking to move into high-stakes roles (Automotive, Aerospace, Robotics):
-* **YouTube:** [Subscribe to MetalSilicon](https://www.youtube.com/@MetalSiliconYT)
+* **YouTube:** [MetalSilicon](https://www.youtube.com/@MetalSiliconYT)
 * **Discord:** [Join the server](https://discord.gg/ZSKJVfrd) — *Discussions about firmware engineering and career help*
 
 ---
