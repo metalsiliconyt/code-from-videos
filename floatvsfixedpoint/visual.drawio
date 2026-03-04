@@ -1,0 +1,113 @@
+<mxfile host="65bd71144e">
+    <diagram id="multiplication_speedups" name="Multiplication Speedups Across MCUs">
+        <mxGraphModel dx="1029" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <mxCell id="main_border" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2;strokeColor=#D6D6D6;strokeWidth=2;fillColor=#FAFAFA;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="30" width="1040" height="540" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="title" value="MULTIPLICATION: WHY FIXED-POINT VS FLOAT SPEEDUPS VARY BY HARDWARE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=20;fontStyle=1;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="45" width="900" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="title1" value="1. ESP32-S3&lt;br&gt;&lt;span style='font-size:14px;font-weight:normal'&gt;(Hardware FPU Available)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=18;fontStyle=1;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="100" width="300" height="40" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="lbl_f1" value="Float Path" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#4A5568;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="160" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_x1" value="Fixed-Point Path" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#4A5568;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="160" width="140" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="box_f1" value="&lt;b&gt;Hardware FPU&lt;/b&gt;&lt;br&gt;&lt;br&gt;1 Native FMUL&lt;br&gt;Instruction&lt;br&gt;&lt;br&gt;&lt;i&gt;(FAST)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D4EDDA;strokeColor=#28A745;strokeWidth=2;fontColor=#155724;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="190" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="box_x1" value="&lt;b&gt;Integer ALU&lt;/b&gt;&lt;br&gt;&lt;br&gt;MUL Instruction&lt;br&gt;+ Bit-Shift&lt;br&gt;&lt;br&gt;&lt;i&gt;(SLOWER)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8FF;strokeColor=#3182CE;strokeWidth=2;fontColor=#2C5282;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="190" width="140" height="120" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="sum1" value="&lt;b style='font-size:20px;'&gt;0.78x Speedup&lt;/b&gt;&lt;br&gt;&lt;b style='color:#C53030'&gt;(Float is Faster)&lt;/b&gt;&lt;hr&gt;Native hardware FPU outperforms multi-instruction integer math." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAFC;strokeColor=#A0AEC0;strokeWidth=2;fontColor=#1A202C;fontFamily=Helvetica;align=center;verticalAlign=top;spacingTop=15;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="360" width="300" height="110" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_f1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#A0AEC0;endArrow=classic;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" parent="1" source="box_f1" target="sum1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_x1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#A0AEC0;endArrow=classic;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" parent="1" source="box_x1" target="sum1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="title2" value="2. Raspberry Pi Pico&lt;br&gt;&lt;span style='font-size:14px;font-weight:normal'&gt;(No FPU - ROM Optimized)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=18;fontStyle=1;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="100" width="300" height="40" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="lbl_f2" value="Float Path" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#4A5568;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="160" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_x2" value="Fixed-Point Path" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#4A5568;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="160" width="140" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="box_f2" value="&lt;b&gt;ROM Soft-Float&lt;/b&gt;&lt;br&gt;&lt;br&gt;Highly Optimized&lt;br&gt;Assembly Logic&lt;br&gt;&lt;br&gt;&lt;i&gt;(MODERATE)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3CD;strokeColor=#FFC107;strokeWidth=2;fontColor=#856404;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="190" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="box_x2" value="&lt;b&gt;Integer ALU&lt;/b&gt;&lt;br&gt;&lt;br&gt;MUL Instruction&lt;br&gt;+ Bit-Shift&lt;br&gt;&lt;br&gt;&lt;i&gt;(FAST)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8FF;strokeColor=#3182CE;strokeWidth=2;fontColor=#2C5282;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="190" width="140" height="120" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="sum2" value="&lt;b style='font-size:20px;'&gt;1.4x Speedup&lt;/b&gt;&lt;br&gt;&lt;b style='color:#2F855A'&gt;(Fixed is Faster)&lt;/b&gt;&lt;hr&gt;ROM optimizations soften the blow, but native integer math still wins out." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAFC;strokeColor=#A0AEC0;strokeWidth=2;fontColor=#1A202C;fontFamily=Helvetica;align=center;verticalAlign=top;spacingTop=15;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="360" width="300" height="110" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_f2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#A0AEC0;endArrow=classic;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" parent="1" source="box_f2" target="sum2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_x2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#A0AEC0;endArrow=classic;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" parent="1" source="box_x2" target="sum2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="title3" value="3. STM32L031&lt;br&gt;&lt;span style='font-size:14px;font-weight:normal'&gt;(No FPU - Generic Software)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=18;fontStyle=1;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="100" width="300" height="40" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="lbl_f3" value="Float Path" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#4A5568;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="160" width="140" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_x3" value="Fixed-Point Path" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#4A5568;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="160" width="140" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="box_f3" value="&lt;b&gt;GCC Soft-Float&lt;/b&gt;&lt;br&gt;&lt;br&gt;Generic __mulsf3&lt;br&gt;C Library&lt;br&gt;&lt;br&gt;&lt;i&gt;(SLOW)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8D7DA;strokeColor=#DC3545;strokeWidth=2;fontColor=#721C24;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="190" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="box_x3" value="&lt;b&gt;Integer ALU&lt;/b&gt;&lt;br&gt;&lt;br&gt;MUL Instruction&lt;br&gt;+ Bit-Shift&lt;br&gt;&lt;br&gt;&lt;i&gt;(FAST)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EBF8FF;strokeColor=#3182CE;strokeWidth=2;fontColor=#2C5282;fontFamily=Helvetica;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="190" width="140" height="120" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="sum3" value="&lt;b style='font-size:20px;'&gt;2.3x Speedup&lt;/b&gt;&lt;br&gt;&lt;b style='color:#2F855A'&gt;(Fixed Dominates)&lt;/b&gt;&lt;hr&gt;Relying purely on generic software emulation creates a massive bottleneck." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAFC;strokeColor=#A0AEC0;strokeWidth=2;fontColor=#1A202C;fontFamily=Helvetica;align=center;verticalAlign=top;spacingTop=15;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="360" width="300" height="110" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="e_f3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#A0AEC0;endArrow=classic;exitX=0.5;exitY=1;entryX=0.25;entryY=0;" parent="1" source="box_f3" target="sum3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_x3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;strokeColor=#A0AEC0;endArrow=classic;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" parent="1" source="box_x3" target="sum3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="div1" value="" style="line;strokeWidth=2;direction=south;html=1;strokeColor=#E2E8F0;strokeDash=1;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="100" width="10" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="div2" value="" style="line;strokeWidth=2;direction=south;html=1;strokeColor=#E2E8F0;strokeDash=1;" parent="1" vertex="1">
+                    <mxGeometry x="715" y="100" width="10" height="380" as="geometry"/>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

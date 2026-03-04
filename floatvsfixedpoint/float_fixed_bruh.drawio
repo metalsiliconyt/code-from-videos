@@ -1,0 +1,71 @@
+<mxfile host="65bd71144e">
+    <diagram id="representation_comparison" name="Fixed vs Float Representation">
+        <mxGraphModel dx="1029" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2;strokeColor=#D6D6D6;strokeWidth=2;fillColor=#FAFAFA;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1000" height="520" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="title" value="DATA REPRESENTATION: 32-BIT MEMORY LAYOUT" style="text;html=1;align=center;fontStyle=1;fontSize=20;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="60" width="980" height="40" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="fixed_header" value="FIXED-POINT (Q8.24)" style="text;html=1;align=left;fontStyle=1;fontSize=16;fontColor=#2C5282;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="300" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="fixed_int" value="INTEGER PART&lt;br&gt;(8 Bits)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF8FF;strokeColor=#3182CE;strokeWidth=2;fontStyle=1;fontColor=#2C5282;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="160" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fixed_frac" value="FRACTIONAL PART&lt;br&gt;(24 Bits)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BEE3F8;strokeColor=#3182CE;strokeWidth=2;fontStyle=1;fontColor=#2C5282;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="160" width="680" height="60" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="fixed_dot" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#2D3748;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="275" y="215" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="fixed_dot_lbl" value="&lt;b&gt;STRICTLY FIXED&lt;/b&gt;&lt;br&gt;Hardware sees one 32-bit Integer" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="235" width="200" height="40" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="float_header" value="FLOATING-POINT (IEEE 754 Single Precision)" style="text;html=1;align=left;fontStyle=1;fontSize=16;fontColor=#C53030;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="340" width="400" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="float_sign" value="S&lt;br&gt;(1)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF5F5;strokeColor=#E53E3E;strokeWidth=2;fontStyle=1;fontColor=#C53030;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="380" width="40" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="float_exp" value="EXPONENT&lt;br&gt;(8 Bits)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FED7D7;strokeColor=#E53E3E;strokeWidth=2;fontStyle=1;fontColor=#C53030;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="380" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="float_mant" value="MANTISSA / FRACTION&lt;br&gt;(23 Bits)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEB2B2;strokeColor=#E53E3E;strokeWidth=2;fontStyle=1;fontColor=#C53030;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="380" width="600" height="60" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="float_dot" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#E53E3E;strokeColor=none;opacity=50;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="435" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="float_dot_arrow" value="" style="endArrow=classic;startArrow=classic;html=1;fontColor=#C53030;strokeColor=#C53030;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="460" as="sourcePoint"/>
+                        <mxPoint x="940" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="float_dot_lbl" value="&lt;b&gt;DYNAMICALLY FLOATS&lt;/b&gt;&lt;br&gt;Position is determined by the Exponent bits" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#C53030;" parent="1" vertex="1">
+                    <mxGeometry x="455" y="470" width="250" height="40" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="bit31" value="Bit 31" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#718096;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="140" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="bit0" value="Bit 0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#718096;" vertex="1" parent="1">
+                    <mxGeometry x="930" y="140" width="40" height="20" as="geometry"/>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

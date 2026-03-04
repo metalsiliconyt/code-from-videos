@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="kernel_comparison" name="Kernel Implementation Detail">
+        <mxGraphModel dx="991" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bg" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=2;strokeColor=#D6D6D6;strokeWidth=2;fillColor=#FAFAFA;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1000" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="h1" value="FLOAT KERNEL (float a * b)" style="text;html=1;align=center;fontStyle=1;fontSize=18;fontColor=#C53030;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="60" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="h2" value="FIXED KERNEL ((a * b) &gt;&gt; Q)" style="text;html=1;align=center;fontStyle=1;fontSize=18;fontColor=#2C5282;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="60" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="f_code" value="&lt;code style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;return a * b;&lt;/code&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF5F5;strokeColor=#E53E3E;fontFamily=Courier New;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="110" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="f_step1" value="&lt;b&gt;Extract Components&lt;/b&gt;&lt;br&gt;Sign, Exponent, Mantissa&lt;br&gt;(Software or FPU logic)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEEBC8;strokeColor=#F6AD55;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="180" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="f_step2" value="&lt;b&gt;Multiply Mantissas&lt;/b&gt;&lt;br&gt;Add Exponents&lt;br&gt;Determine Result Sign" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEEBC8;strokeColor=#F6AD55;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="270" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="f_step3" value="&lt;b&gt;Normalize &amp; Round&lt;/b&gt;&lt;br&gt;Shift mantissa to 1.xxx&lt;br&gt;Check for overflow/NaN" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEEBC8;strokeColor=#F6AD55;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="360" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_code" value="&lt;code style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;return (fixed_t)((a * b) &amp;gt;&amp;gt; Q);&lt;/code&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF8FF;strokeColor=#3182CE;fontFamily=Courier New;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="110" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_step1" value="&lt;b&gt;Integer Multiplier&lt;/b&gt;&lt;br&gt;Raw bit-for-bit multiply&lt;br&gt;(32-bit x 32-bit = 64-bit)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C6F6D5;strokeColor=#48BB78;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="180" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_step2" value="&lt;b&gt;Barrel Shifter&lt;/b&gt;&lt;br&gt;Right-shift by Q-bits&lt;br&gt;to realign decimal point" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C6F6D5;strokeColor=#48BB78;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="270" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="x_step3" value="&lt;b&gt;Truncate&lt;/b&gt;&lt;br&gt;Cast 64-bit result&lt;br&gt;back to 32-bit integer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C6F6D5;strokeColor=#48BB78;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="360" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="f_code" target="f_step1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="f_step1" target="f_step2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr3" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="f_step2" target="f_step3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr4" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="x_code" target="x_step1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr5" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="x_step1" target="x_step2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arr6" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="x_step2" target="x_step3" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="note_x" value="On STM32L0: These 3 steps take ~5 cycles total. Floating point would take ~150 cycles." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#2C5282;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="450" width="300" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
