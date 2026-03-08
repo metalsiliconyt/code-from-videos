@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="sensor_polymorphism_diagram" name="Sensor Reading Example">
+        <mxGraphModel dx="1025" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="&lt;h1 style=&quot;margin:0px;&quot;&gt;Dynamic Dispatch / Polymorphism&lt;/h1&gt;&lt;p style=&quot;margin:0px;&quot;&gt;Firmware Example: Sensor Abstraction Layer&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="20" width="400" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="client" value="&lt;b&gt;SensorDashboard&lt;/b&gt;&lt;hr&gt;- sensors : Sensor*[]&lt;br&gt;&lt;hr&gt;+ updateDisplay()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="150" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="client_note" value="&lt;i&gt;The dashboard iterates through the list and calls &lt;b&gt;read()&lt;/b&gt;. It doesn&#39;t care if it&#39;s I2C, SPI, or ADC logic.&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="40" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_client_note" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;dashed=1;" parent="1" source="client_note" target="client" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="interface" value="&lt;b&gt;&amp;lt;&amp;lt;Abstract&amp;gt;&amp;gt;&lt;br&gt;Sensor&lt;/b&gt;&lt;hr&gt;# name : const char*&lt;br&gt;&lt;hr&gt;+ read() : int = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="150" width="260" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_dependency" value="Uses" style="endArrow=classic;html=1;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="client" target="interface" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="temp_sensor" value="&lt;b&gt;TempSensor&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+ read() : int&lt;/span&gt;&lt;br&gt;&lt;hr&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="350" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="accel_sensor" value="&lt;b&gt;AccelSensor&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+ read() : int&lt;/span&gt;&lt;br&gt;&lt;hr&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="350" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="gyro_sensor" value="&lt;b&gt;GyroSensor&lt;/b&gt;&lt;hr&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;+ read() : int&lt;/span&gt;&lt;br&gt;&lt;hr&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="350" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_temp" style="endArrow=block;endFill=0;html=1;dashed=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="temp_sensor" target="interface" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_accel" style="endArrow=block;endFill=0;html=1;dashed=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="accel_sensor" target="interface" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_gyro" style="endArrow=block;endFill=0;html=1;dashed=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="gyro_sensor" target="interface" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_code" value="&lt;b&gt;C++ (Virtual Functions + VTable)&lt;/b&gt;&lt;br&gt;&lt;pre style=&quot;font-size:10px;&quot;&gt;&lt;code style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;class Sensor {&lt;br&gt;protected: const char* name;&lt;br&gt;public:&lt;br&gt;  Sensor(const char* n) : name(n) {}&lt;br&gt;  virtual int read() = 0;&lt;br&gt;};&lt;br&gt;&lt;br&gt;class TempSensor : public Sensor {&lt;br&gt;public:&lt;br&gt;  TempSensor() : Sensor(&quot;LM75&quot;) {}&lt;br&gt;  int read() override { return 25; }&lt;br&gt;};&lt;/code&gt;&lt;/pre&gt;&lt;pre style=&quot;font-size:10px;&quot;&gt;&lt;code style=&quot;&quot;&gt;&lt;pre style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;code style=&quot;font-family: monospace; color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;// Usage:&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;TempSensor temp;&lt;br/&gt;int val = temp.read();&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=8;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="480" width="350" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_code" value="&lt;b&gt;C (Struct + Function Pointers)&lt;/b&gt;&lt;br&gt;&lt;pre style=&quot;font-size:10px;&quot;&gt;&lt;code style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&quot;&gt;typedef struct {&lt;br&gt;  const char* name;&lt;br&gt;  int (*read)(void);&lt;br&gt;} SensorInterface;&lt;br&gt;&lt;br&gt;int read_temp() { return 25; }&lt;br&gt;&lt;br&gt;// Manual wiring:&lt;br&gt;SensorInterface temp = {&lt;br&gt;  .name = &quot;LM75&quot;,&lt;br&gt;  .read = read_temp&lt;br&gt;};&lt;br&gt;&lt;br&gt;// Usage:&lt;br&gt;int val = temp.read();&lt;/code&gt;&lt;/pre&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacing=8;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="480" width="350" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="vtable_note" value="&lt;b&gt;Memory Insight:&lt;/b&gt;&lt;br&gt;In C++, &lt;b&gt;read()&lt;/b&gt; is in a Flash-based VTable.&lt;br&gt;In C, the function pointer is stored in RAM inside the struct instance." style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="760" width="300" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

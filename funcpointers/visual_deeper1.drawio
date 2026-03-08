@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="vtable_scaling_full_map" name="Vtable Scaling vs C Structs (Full Map)">
+        <mxGraphModel dx="1161" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="main_border" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;strokeColor=#D6D6D6;strokeWidth=2;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1090" height="880" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="FULL MEMORY MAP: C STRUCTS VS. C++ VTABLES" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=24;fontStyle=1;fontColor=#2D3748;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="70" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_ram_bg" value="RAM (Read-Write)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EBF8FF;strokeColor=#3182CE;verticalAlign=top;fontStyle=1;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="160" width="250" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_struct" value="&lt;b&gt;SensorInstance (C Struct)&lt;/b&gt;&lt;hr&gt;temp_read (4B) &lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BEE3F8;strokeColor=#3182CE;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="95" y="210" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_flash_bg" value="FLASH (Read-Only)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0FFF4;strokeColor=#38A169;verticalAlign=top;fontStyle=1;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="160" width="300" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_code_logic" value="&lt;b&gt;Implementation Code&lt;/b&gt;&lt;hr&gt;int temp_read() { ... }" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C6F6D5;strokeColor=#38A169;align=left;spacingLeft=10;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="210" width="250" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_arrow" value="Direct Jumps from RAM to FLASH" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#3182CE;dashed=1;" parent="1" source="c_struct" target="c_code_logic" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_ram_bg" value="RAM (Read-Write)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF5F5;strokeColor=#E53E3E;verticalAlign=top;fontStyle=1;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="450" width="250" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_object" value="&lt;b&gt;TempSensor (C++ Object)&lt;/b&gt;&lt;hr&gt;vptr (4B)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FED7D7;strokeColor=#E53E3E;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="95" y="530" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_flash_bg" value="FLASH (Read-Only)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0FFF4;strokeColor=#38A169;verticalAlign=top;fontStyle=1;spacingTop=5;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="450" width="630" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_vtable" value="&lt;b&gt;VTable for TempSensor&lt;/b&gt;&lt;hr&gt;[0] &amp;amp;TempSensor::read" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FEB2B2;strokeColor=#C53030;align=left;spacingLeft=10;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="500" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_code_logic" value="&lt;b&gt;Implementation Code&lt;/b&gt;&lt;hr&gt;int read() override { ... }&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C6F6D5;strokeColor=#38A169;align=left;spacingLeft=10;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="500" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_arrow1" value="vptr lookup" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#E53E3E;" parent="1" source="cpp_object" target="cpp_vtable" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpp_arrow2" value="Indirect Jump" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;strokeColor=#38A169;" parent="1" source="cpp_vtable" target="cpp_code_logic" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="annotation" value="&lt;b&gt;WHY THIS MATTERS AT SCALE:&lt;/b&gt;&lt;br&gt;In C, the 3 function pointers are stored &lt;b&gt;inside every single object in RAM&lt;/b&gt;.&lt;br&gt;In C++, the 3 function pointers are stored &lt;b&gt;ONCE in Flash&lt;/b&gt;. The object in RAM only keeps a single 4-byte map-marker (the vptr)." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="720" width="1010" height="100" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
