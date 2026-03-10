@@ -1,0 +1,69 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00020000         xr
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+START GROUP
+LOAD /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/libgcc.a
+LOAD /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/libc.a
+END GROUP
+
+.text           0x08000000       0x6c
+ *(.text)
+ .text          0x08000000       0x6c /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+                0x08000000                demonstrate_stack_const
+                0x08000040                main
+
+.glue_7         0x0800006c        0x0
+ .glue_7        0x0800006c        0x0 linker stubs
+
+.glue_7t        0x0800006c        0x0
+ .glue_7t       0x0800006c        0x0 linker stubs
+
+.vfp11_veneer   0x0800006c        0x0
+ .vfp11_veneer  0x0800006c        0x0 linker stubs
+
+.v4_bx          0x0800006c        0x0
+ .v4_bx         0x0800006c        0x0 linker stubs
+
+.iplt           0x0800006c        0x0
+ .iplt          0x0800006c        0x0 /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+
+.rodata         0x0800006c        0x4
+ *(.rodata*)
+ .rodata        0x0800006c        0x4 /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+                0x0800006c                FIRMWARE_VERSION
+
+.rel.dyn        0x08000070        0x0
+ .rel.iplt      0x08000070        0x0 /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+
+.data           0x20000000        0x0 load address 0x08000070
+ *(.data)
+ .data          0x20000000        0x0 /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+
+.igot.plt       0x20000000        0x0 load address 0x08000070
+ .igot.plt      0x20000000        0x0 /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+
+.bss            0x20000000        0xc load address 0x08000070
+ *(.bss)
+ .bss           0x20000000        0xc /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+                0x20000000                status_register
+OUTPUT(output.elf elf32-littlearm)
+LOAD linker stubs
+
+.comment        0x00000000       0x45
+ .comment       0x00000000       0x45 /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
+                                 0x46 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x2a
+ .ARM.attributes
+                0x00000000       0x2a /var/folders/wx/yv9__h2d4hg74r6fj1dx2c640000gn/T//ccrzR5sZ.o
