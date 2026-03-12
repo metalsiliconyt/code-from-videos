@@ -4,11 +4,12 @@ typedef int  (*read_fptr)(void);
 typedef void (*init_fptr)(void);
 typedef void (*reset_fptr)(void);
 
+// Our function pointers will not change during runtime.
 typedef struct {
     const char* name;
-    init_fptr   init;
-    read_fptr   read;
-    reset_fptr  reset;
+    const init_fptr   init;
+    const read_fptr   read;
+    const reset_fptr  reset;
 } SensorInterface;
 
 // Hardware logic
@@ -27,10 +28,12 @@ void run_sensor(SensorInterface* s) {
     s->reset();
 }
 
+// 1. Structures Created  'statically'
+SensorInterface temp = { "Temp(LM75)", init_temp, read_temp, reset_temp };
+SensorInterface accel = { "Accel(ADXL)", init_accel, read_accel, reset_accel };
+
 int main() {
-    // 1. These structs MUST exist in RAM now.
-    SensorInterface temp = { "Temp(LM75)", init_temp, read_temp, reset_temp };
-    SensorInterface accel = { "Accel(ADXL)", init_accel, read_accel, reset_accel };
+
 
     // 2. The Pointer Array (The Manager)
     SensorInterface* sensors[] = { &temp, &accel };
