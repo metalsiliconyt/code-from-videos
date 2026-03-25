@@ -1,0 +1,107 @@
+<mxfile host="65bd71144e">
+    <diagram id="hw_arch" name="Hardware Architecture: DMA vs CPU Polling">
+        <mxGraphModel dx="2412" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="main_title" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Hardware Architecture: DMA-Driven Sensor Acquisition&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="40" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys_bus" value="&lt;b&gt;System Bus Matrix (e.g., AHB/APB)&lt;/b&gt;&lt;br&gt;The Communication Highway" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="240" width="840" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="master_label" value="Bus Masters" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="120" y="110" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="cpu_core" value="&lt;b&gt;CPU Core&lt;/b&gt;&lt;br&gt;Executes Main Loop/RTOS&lt;br&gt;&lt;hr&gt;&lt;i&gt;Runs deterministic code&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#0066cc;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="100" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dma_ctrl" value="&lt;b&gt;DMA Controller&lt;/b&gt;&lt;br&gt;Independent Data Processor&lt;br&gt;&lt;hr&gt;&lt;i&gt;Handles background transfers&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="100" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="slave_label" value="Bus Slaves" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="120" y="360" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="ram_block" value="&lt;b&gt;Main RAM (SRAM)&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffcc;strokeColor=#cccc00;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="340" width="200" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="dma_buffer" value="&lt;b&gt;dma_rx_buffer [16]&lt;/b&gt;&lt;br&gt;Volatile / Non-Cacheable&lt;br&gt;(The &#39;Glass Box&#39;)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="175" y="390" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="spi_periph" value="&lt;b&gt;SPI1 Peripheral&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="340" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="spi_dr" value="&lt;b&gt;SPI1-&gt;DR&lt;/b&gt;&lt;br&gt;Data Register (Source)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="380" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext_sensor" value="&lt;b&gt;External Sensor&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="530" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge_cpu_bus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#0066cc;" parent="1" source="cpu_core" target="sys_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="210"/>
+                            <mxPoint x="260" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_dma_bus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#cc6600;" parent="1" source="dma_ctrl" target="sys_bus" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="820" y="210"/>
+                            <mxPoint x="820" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_bus_ram" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" parent="1" source="sys_bus" target="ram_block" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="310"/>
+                            <mxPoint x="260" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_bus_spi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;" parent="1" source="sys_bus" target="spi_periph" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="820" y="310"/>
+                            <mxPoint x="820" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_sensor_spi" value="&lt;b&gt;External Bus (SPI)&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#cc0000;" parent="1" source="ext_sensor" target="spi_periph" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow_hw" value="&lt;b&gt;Background DMA Transfer&lt;/b&gt;&lt;br&gt;(Zero CPU Usage)&quot;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=5;strokeColor=#ff6600;dashed=1;curved=1;" parent="1" source="spi_dr" target="dma_buffer" edge="1">
+                    <mxGeometry x="-0.0035" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="940" y="405"/>
+                            <mxPoint x="940" y="660"/>
+                            <mxPoint x="100" y="660"/>
+                            <mxPoint x="100" y="420"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="flow_cpu" value="&lt;b&gt;Deterministic CPU Read&lt;/b&gt;&lt;br&gt;(Instant, Zero-Wait)&quot;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=5;strokeColor=#0066cc;curved=1;" parent="1" source="dma_buffer" target="cpu_core" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="260" y="460"/>
+                            <mxPoint x="50" y="460"/>
+                            <mxPoint x="50" y="145"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_drq" value="DMA Request (DRQ)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;dashed=1;" parent="1" source="spi_periph" target="dma_ctrl" edge="1">
+                    <mxGeometry x="0.1" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1020" y="395"/>
+                            <mxPoint x="1020" y="145"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
